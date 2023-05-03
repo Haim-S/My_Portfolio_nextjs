@@ -1,9 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
-import {AiOutlineClose, AiOutlineMenu, AiOutlineMail} from "react-icons/ai"
-import {FaLinkedinIn, FaGithub} from "react-icons/fa";
-import {BsFillPersonLinesFill} from "react-icons/bs";
+import { AiOutlineMenu} from "react-icons/ai"
 import {PAGES_PATH} from "../../constants/PAGES_PATH"
 
 import NavLogo from '../../public/assets/navLogo.png'
@@ -56,24 +54,13 @@ const Navbar = () => {
 
             <div>
             <ul style={{ color: `${linkColor}` }} className='hidden md:flex'>
-                <Link href={"/"}>
-                   <li className='ml-10 text-sm uppercase hover:border-b'>HOME</li>
+              {PAGES_PATH.map((p, i)=>{
+                return(
+                  <Link key={i} href={p.path}>
+                   <li className='ml-10 text-sm uppercase hover:border-b'>{p.linkLabel}</li>
                 </Link>
-                <Link href={"/#about"}>
-                   <li className='ml-10 text-sm uppercase hover:border-b'>About</li>
-                </Link>
-                <Link href={"/#skills"}>
-                   <li className='ml-10 text-sm uppercase hover:border-b'>Skills</li>
-                </Link>
-                <Link href={"/#projects"}>
-                   <li className='ml-10 text-sm uppercase hover:border-b'>Projects</li>
-                </Link>
-                <Link href={"/resume"}>
-                   <li className='ml-10 text-sm uppercase hover:border-b'>Resume</li>
-                </Link>
-                <Link href={"/#contact"}>
-                   <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
-                </Link>
+                )
+              })}
             </ul>
             </div>
             <div onClick={handleNav} className='md:hidden'>
@@ -82,28 +69,7 @@ const Navbar = () => {
         </div>
             <SideBar nav={nav} handleNav={handleNav}/>
   </div>
-        
-
-
-// {/* 
-//         <div>
-//             {PAGES_PATH.map((page, index)=>{
-//             <ul key={index} style={{ color: `${linkColor}` }} className='hidden md:flex'>
-//                 <li className='ml-10 text-sm uppercase hover:border-b'>
-//                   <Link href={page.path}>{page.linkLabel}</Link>
-//                 </li>
-//             </ul>
-
-//             })}
-          
-      
-//           <div onClick={handleNav} className='md: hidden'>
-//             <AiOutlineMenu size={25}/>
-//           </div>
-//         </div>
-//       </div>
-//     </div> */}
-      
+              
   )
 }
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {AiOutlineClose} from "react-icons/ai"
 import Icons from '../common/Icons';
-
+import {PAGES_PATH} from "../../constants/PAGES_PATH"
 import NavLogo from '../../public/assets/navLogo.png'
 
 const SideBar = ({nav, handleNav}) => {
@@ -36,24 +36,13 @@ const SideBar = ({nav, handleNav}) => {
 
     <div className='py-4 flex flex-col'>
         <ul className='uppercase'>
-            <Link href={"/"}>
-            <li className='py-4 text-sm'>Home</li>
-            </Link>
-            <Link href={"/#about"}>
-            <li className='py-4 text-sm'>About</li>
-            </Link>
-            <Link href={"/#skills"}>
-            <li className='py-4 text-sm'>Skills</li>
-            </Link>
-            <Link href={"/#projects"}>
-            <li className='py-4 text-sm'>Projects</li>
-            </Link>
-            <Link href={"/resume"}>
-            <li className='py-4 text-sm'>Resume</li>
-            </Link>
-            <Link href={"/#contact"}>
-            <li className='py-4 text-sm'>Contact</li>
-            </Link>
+        {PAGES_PATH.map((p, i)=>{
+                return(
+                  <Link key={i} href={p.path}>
+                   <li className='py-4 text-sm'>{p.linkLabel}</li>
+                </Link>
+                )
+              })}
         </ul>
         <div className='pt-28'>
               <p className='uppercase tracking-widest text-[#5651e5]'>Let's Connect</p>
