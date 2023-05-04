@@ -4,9 +4,9 @@ import Image from 'next/image'
 
 import Main from '@/components/main/Main'
 import About from '@/components/about/About'
-import Skills from '@/components/Skills'
-import Projects from '@/components/Projects'
-import Contact from '@/components/Contact'
+import Skills from '@/components/skills/Skills'
+import Projects from '@/components/projects/Projects'
+import Contact from '@/components/contact/Contact'
 
 
 
