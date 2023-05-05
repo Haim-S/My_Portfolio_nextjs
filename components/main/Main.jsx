@@ -14,10 +14,11 @@ const Main = () => {
 
           <p className='uppercase text-sm tracking-widest text-gray-600'>LET'S BUILD SOMETHING TOGETHER</p>
           <h1 className='py-4 text-gray-700'>
-            Hi, Im Clint
+          Hi, here is my portfolio
           </h1>
           <h1 className='py-2 text-gray-700'>
-            A, Full-Stack Web Developer
+          I am
+Full-crazy web developer
           </h1>
           <p className='py-4 text-gray-600 sm:max-w-[70%] m-auto'>
           I’m focused on building responsive front-end web applications
