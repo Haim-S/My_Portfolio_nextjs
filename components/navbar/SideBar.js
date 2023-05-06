@@ -39,7 +39,7 @@ const SideBar = ({nav, handleNav}) => {
         {PAGES_PATH.map((p, i)=>{
                 return(
                   <Link key={i} href={p.path}>
-                   <li className='py-4 text-sm'>{p.linkLabel}</li>
+                   <li onClick={handleNav} className='py-4 text-sm'>{p.linkLabel}</li>
                 </Link>
                 )
               })}
