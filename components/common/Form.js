@@ -1,6 +1,8 @@
-import React, {useRef} from 'react'
+import React, {useRef, useState} from 'react'
 
 const Form = () => {
+
+  const [status, setStatus] = useState(false);
 
     const Refname = useRef();
     const Refphone = useRef();
@@ -91,7 +93,9 @@ const Form = () => {
             )
         })
         }
+        {status ? <h3>We will get back to you soon</h3> : 
         <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
+        }
 
 </form>
   )
