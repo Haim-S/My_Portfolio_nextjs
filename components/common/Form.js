@@ -29,6 +29,7 @@ const Form = () => {
       })
       let result = await response.json();
       console.log(result);
+      setStatus(true);
 
          Refname.current.value = "";
         Refemail.current.value = "";
