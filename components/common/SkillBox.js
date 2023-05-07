@@ -6,12 +6,13 @@ import Javascript from '../../public/assets/skills/javascript.png';
 import ReactImg from '../../public/assets/skills/react.png';
 import Tailwind from '../../public/assets/skills/tailwind.png';
 import Github from '../../public/assets/skills/github1.png';
-// import Firebase from '../public/assets/skills/firebase.png';
 import NextJS from '../../public/assets/skills/nextjs.png'
 import MongoDB from '../../public/assets/skills/mongo.png'
 import Node from "../../public/assets/skills/node.png"
 import Shopify from "../../public/assets/skills/shopify.png"
-// import AWS from '../public/assets/skills/aws.png';
+import mySql from "../../public/assets/skills/mysql.png"
+import Mui from "../../public/assets/skills/mui.png"
+
 
 const SkillBox = () => {
 
@@ -21,10 +22,12 @@ const SkillBox = () => {
         {img: Javascript, name: "Javascript"},
         {img: ReactImg, name: "React"},
         {img: Tailwind, name: "Tailwind"},
+        {img: Mui, name: "Mui"},
         {img: Node, name: "Node"},
         {img: Github, name: "Github"},
         {img: NextJS, name: "NextJS"},
         {img: MongoDB, name: "MongoDB"},
+        {img: mySql, name: "MySQL"},
         {img: Shopify, name: "Shopify"},
     ]
   return (

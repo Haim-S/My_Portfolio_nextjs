@@ -2,20 +2,24 @@ import React from 'react'
 import ProjectItem from '../common/ProjectItem'
 import propertyImg from '../../public/assets/projects/property.jpg';
 import cryptoImg from   '../../public/assets/projects/crypto.jpg'
-import netflixImg from  '../../public/assets/projects/netflix.png'
+import myZoo from  '../../public/assets/projects/myZoo.png'
 import twitchImg from   '../../public/assets/projects/twitch.jpg'
 import giftStore from "../../public/assets/projects/giftStore.jpeg"
 import shosStore from "../../public/assets/projects/shosStore.png"
 
+
+import okd from "../../public/assets/projects/okd.png"
+
+import mentorcruise from "../../public/assets/projects/mentorcruise.png"
+
 const Projects = () => {
 
  const MY_PROJECTS = [
-    {title: 'Gift Store', backgroundImg: giftStore, subject: 'React JS',projectUrl: '/property'},
-    {title: 'Shose Store', backgroundImg: shosStore,        subject: 'Vanilla JS',projectUrl: '/crypto'},
-    {title: 'Netflix App', backgroundImg: netflixImg,      subject: 'React JS',projectUrl: '/netflix'},
-    {title: 'Property Finder', backgroundImg: twitchImg,   subject: 'Next JS',projectUrl: '/twitch'},
-    {title: 'Property Finder', backgroundImg: twitchImg,   subject: 'Next JS',projectUrl: '/twitch'},
-    {title: 'Property Finder', backgroundImg: twitchImg,   subject: 'Next JS',projectUrl: '/twitch'},
+   {id:2 ,title: 'mentorcruise', backgroundImg: mentorcruise,   subject: 'React JS',projectUrl: '/twitch'},
+   {id:3 ,title: 'myZoo App', backgroundImg: myZoo,      subject: 'React JS',projectUrl: '/netflix'},
+   {id:1 ,title: 'Gift Store', backgroundImg: giftStore, subject: 'React JS',projectUrl: '/property'},
+   {id:4 ,title: 'okd', backgroundImg: okd,   subject: 'Next JS',projectUrl: '/twitch'},
+   {id:5 ,title: 'Shose Store', backgroundImg: shosStore,        subject: 'Vanilla JS',projectUrl: '/crypto'},
   ]
 
 
@@ -32,6 +36,7 @@ const Projects = () => {
           return(
             <ProjectItem
             key={i}
+            projectID ={p.id}
             title={p.title}
             backgroundImg={p.backgroundImg}
             projectUrl={p.projectUrl}
