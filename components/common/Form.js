@@ -18,7 +18,7 @@ const Form = () => {
         subject: Refsubject.current.value,
         message: Refmessage.current.value
        };
-
+       setStatus(true);
        let response = await fetch("https://sendtomyemail-render-server.onrender.com/send-email", {
           method: "POST",
           headers: {
@@ -28,8 +28,8 @@ const Form = () => {
       })
       let result = await response.json();
       console.log(result);
-      setStatus(true);
-
+     
+console.log(status);
          Refname.current.value = "";
         Refemail.current.value = "";
       Refsubject.current.value = "";
@@ -93,7 +93,8 @@ const Form = () => {
             )
         })
         }
-        {status ? <h3 className='w-full p-4 text-gray-100 mt-4'>We will get back to you soon</h3> : 
+        {status ? <h3 className='w-full p-4 mt-4'>We will get back to you soon</h3> 
+        : 
         <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
         }
 
