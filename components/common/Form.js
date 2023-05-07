@@ -12,7 +12,6 @@ const Form = () => {
 
     const handelSubmit = async (e)=>{
       e.preventDefault();
-      console.log(Refmessage.current?.value);
       let details = {
         name:    Refname.current.value,
         email:   Refemail.current.value,
@@ -94,7 +93,7 @@ const Form = () => {
             )
         })
         }
-        {status ? <h3>We will get back to you soon</h3> : 
+        {status ? <h3 className='w-full p-4 text-gray-100 mt-4'>We will get back to you soon</h3> : 
         <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
         }
 
