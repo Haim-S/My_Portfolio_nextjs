@@ -12,8 +12,8 @@ const Form = () => {
       e.preventDefault();
       console.log(Refmessage.current?.value);
       let details = {
-        name: Refname.current.value,
-        email: Refemail.current.value,
+        name:    Refname.current.value,
+        email:   Refemail.current.value,
         subject: Refsubject.current.value,
         message: Refmessage.current.value
        };
@@ -27,6 +27,11 @@ const Form = () => {
       })
       let result = await response.json();
       console.log(result);
+
+         Refname.current.value = "";
+        Refemail.current.value = "";
+      Refsubject.current.value = "";
+      Refmessage.current.value = "";
     }
 
     const INPUT = [
