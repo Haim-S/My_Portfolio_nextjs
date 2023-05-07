@@ -13,7 +13,7 @@ const Form = () => {
     const handelSubmit = async (e)=>{
       e.preventDefault();
       let details = {
-        name:    Refname.current.value,
+        name:    Refname.current.value + Refphone.current.value,
         email:   Refemail.current.value,
         subject: Refsubject.current.value,
         message: Refmessage.current.value
@@ -26,14 +26,16 @@ const Form = () => {
           },
           body: JSON.stringify(details)
       })
+      
+      Refname.current.value = "";
+      Refphone.current.value = "";
+     Refemail.current.value = "";
+   Refsubject.current.value = "";
+   Refmessage.current.value = "";
       let result = await response.json();
       console.log(result);
-     
-console.log(status);
-         Refname.current.value = "";
-        Refemail.current.value = "";
-      Refsubject.current.value = "";
-      Refmessage.current.value = "";
+  
+    
     }
 
     const INPUT = [
