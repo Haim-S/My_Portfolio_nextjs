@@ -8,8 +8,25 @@ const Form = () => {
     const Refsubject = useRef();
     const Refmessage = useRef();
 
-    const handelSubmit = ()=>{
-        console.log(name.current.value);
+    const handelSubmit = async (e)=>{
+      e.preventDefault();
+      console.log(Refmessage.current?.value);
+      let details = {
+        name: Refname.current.value,
+        email: Refemail.current.value,
+        subject: Refsubject.current.value,
+        message: Refmessage.current.value
+       };
+
+       let response = await fetch("https://sendtomyemail-render-server.onrender.com/send-email", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json;charset=utf-8"
+          },
+          body: JSON.stringify(details)
+      })
+      let result = await response.json();
+      console.log(result);
     }
 
     const INPUT = [
@@ -63,13 +80,13 @@ const Form = () => {
                 <textarea
                   className='border-2 rounded-lg p-3 border-gray-300'
                   rows='10'
-                  name={p.ref}
+                  ref={p.ref}
                 ></textarea>
               </div>
             )
         })
         }
-        <button className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
+        <button type="submit" className='w-full p-4 text-gray-100 mt-4'>Send Message</button>
 
 </form>
   )

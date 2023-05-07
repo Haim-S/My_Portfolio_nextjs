@@ -1,5 +1,5 @@
-import Image from 'next/image'
 import React from 'react'
+import Image from 'next/image'
 import ContactImg from '../../public/assets/contact.jpg';
 import Icons from '../common/Icons';
 import Form from '../common/Form';
@@ -7,6 +7,10 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import Link from 'next/link';
 
 const Contact = () => {
+
+
+
+
   return (
 <div id='contact' className='w-full lg:h-screen'>
   <div  className='max-w-[1240px] m-auto px-2 py-16 w-full'>
