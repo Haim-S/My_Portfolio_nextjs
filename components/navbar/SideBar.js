@@ -20,12 +20,13 @@ const SideBar = ({nav, handleNav}) => {
  'fixed left-[-100%] top-0 p-10 ease-in duration-500'}
 >
     <div className='flex w-full items-center justify-between'>
-    <Image   src={NavLogo}
+    {/* <Image   src={NavLogo}
               alt='/'
               width='50'
               height='50'
               className='cursor-pointer'
-    />
+    /> */}
+     <h3  className='cursor-pointer' style={{width: "70", height: "50"}}>AHS</h3>
    <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
         <AiOutlineClose />
     </div>
