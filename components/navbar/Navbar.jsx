@@ -45,11 +45,13 @@ const Navbar = () => {
   >
         <div className='flex justify-between items-center w-full h-full px-2 2xl:px-16'>
             <Link href='/'>
-            <Image   src={NavLogo}
+            {/* <Image   src={NavLogo}
               alt='/'
               width='70'
               height='50'
-              className='cursor-pointer'/>
+              className='cursor-pointer'/> */}
+              <h1  className='cursor-pointer' style={{width: "70", height: "50"}}>AHS</h1>
+
             </Link>
 
             <div>
