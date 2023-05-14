@@ -27,12 +27,12 @@ const SideBar = ({nav, handleNav}) => {
               className='cursor-pointer'
     /> */}
      <h3  className='cursor-pointer' style={{width: "70", height: "50"}}>AHS</h3>
-   <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
+    <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'>
         <AiOutlineClose />
     </div>
     </div>
     <div className='border-b border-gray-300 my-4'>
-        <p className='w-[85%] md:w-[90%] py-4'>Les't build something legendary together</p>
+        <p className='w-[85%] md:w-[90%] py-4'>Come build something legendary together</p>
     </div> 
 
     <div className='py-4 flex flex-col'>

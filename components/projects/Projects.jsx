@@ -9,6 +9,7 @@ import shosStore from "../../public/assets/projects/shosStore.png"
 
 
 import okd from "../../public/assets/projects/okd.png"
+import okd_2 from "../../public/assets/projects/okd_2.png"
 
 import mentorcruise from "../../public/assets/projects/mentorcruise.png"
 
@@ -16,9 +17,10 @@ const Projects = () => {
 
  const MY_PROJECTS = [
    {id:2 ,title: 'mentorcruise', backgroundImg: mentorcruise,   subject: 'React JS',projectUrl: '/twitch'},
-   {id:3 ,title: 'myZoo App', backgroundImg: myZoo,      subject: 'React JS',projectUrl: '/netflix'},
+   {id:6 ,title: 'OKD App', backgroundImg: okd_2,      subject: 'Next JS',projectUrl: '/netflix'},
    {id:1 ,title: 'Gift Store', backgroundImg: giftStore, subject: 'React JS',projectUrl: '/property'},
-   {id:4 ,title: 'okd', backgroundImg: okd,   subject: 'Next JS',projectUrl: '/twitch'},
+   {id:4 ,title: 'okd', backgroundImg: okd,   subject: 'React JS',projectUrl: '/twitch'},
+   {id:3 ,title: 'myZoo App', backgroundImg: myZoo,      subject: 'React JS',projectUrl: '/netflix'},
    {id:5 ,title: 'Shose Store', backgroundImg: shosStore,        subject: 'Vanilla JS',projectUrl: '/crypto'},
   ]
 
